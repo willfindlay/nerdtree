@@ -366,11 +366,17 @@ function! s:Creator.toggleTabTree(dir)
                 call b:NERDTree.render()
             endif
             call b:NERDTree.ui.restoreScreenState()
+            if g:NERDTreeFindOnToggle == 1
+                call s:findAndRevealPath(%)
+            endif
         else
             call g:NERDTree.Close()
         endif
     else
         call self.createTabTree(a:dir)
+        if g:NERDTreeFindOnToggle == 1
+            call s:findAndRevealPath(%)
+        endif
     endif
 endfunction
 

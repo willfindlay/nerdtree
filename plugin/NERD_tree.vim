@@ -70,6 +70,7 @@ call s:initVariable("g:NERDTreeShowFiles", 1)
 call s:initVariable("g:NERDTreeShowHidden", 0)
 call s:initVariable("g:NERDTreeShowLineNumbers", 0)
 call s:initVariable("g:NERDTreeSortDirs", 1)
+call s:initVariable("g:NERDTreeFindOnToggle", 0)
 
 if !nerdtree#runningWindows() && !nerdtree#runningCygwin()
     call s:initVariable("g:NERDTreeDirArrowExpandable", "▸")
